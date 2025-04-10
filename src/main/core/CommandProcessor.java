@@ -36,6 +36,12 @@ public class CommandProcessor {
 
     public void processCommand(String input){
         boolean found = false;
+
+        if(input.toLowerCase().contains("search google")){
+            new SearchGoogle(input).execute();
+            found = true;
+        }
+
         for(String command : commands.keySet()){
             if(input.toLowerCase().contains(command)){
                 commands.get(command).run();
