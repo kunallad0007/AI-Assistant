@@ -1,7 +1,6 @@
 package main.core;
 
 import main.actions.*;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,6 +24,9 @@ public class CommandProcessor {
 
         //open YouTube
         commands.put("open youtube", new OpenYoutube()::execute);
+
+        //open spotify
+        commands.put("open spotify", new OpenSpotify()::execute);
 
     }
 
