@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class SearchGoogle {
 
-    private String query;
+    private final String query;
 
     public SearchGoogle(String input){
         this.query = input.toLowerCase().replace("search goggle", "").trim();
