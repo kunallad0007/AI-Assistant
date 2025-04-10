@@ -19,8 +19,7 @@ A simple AI-based desktop assistant built with **Java** that performs real-time 
 
 ✅ Smart AI Command:
 - Google Search:  
-  Example: `search google how to reverse a string in java`  
-  → Opens browser with search results!
+  Example: `search google how to reverse a string in java`  → Opens browser with search results!
 
 ---
 
