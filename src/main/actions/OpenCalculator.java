@@ -8,7 +8,7 @@ public class OpenCalculator {
             new ProcessBuilder("cmd", "/c", "start calc").start();
             System.out.println("Opening Calculator...");
         }catch (IOException e){
-            System.err.println("Error: " + e.getMessage());
+            System.err.println("Sorry, I didn't understand you!");
         }
     }
 }
