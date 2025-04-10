@@ -28,6 +28,9 @@ public class CommandProcessor {
         //open spotify
         commands.put("open spotify", new OpenSpotify()::execute);
 
+        //open show date
+        commands.put("what is today's date", new ShowDate()::execute);
+
     }
 
 
