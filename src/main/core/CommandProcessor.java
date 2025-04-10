@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class CommandProcessor {
 
-    private Map<String, Runnable> commands = new HashMap<>();
+    private final Map<String, Runnable> commands = new HashMap<>();
 
     public CommandProcessor(){
         //Register all commands here
