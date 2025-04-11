@@ -33,6 +33,14 @@ public class CommandProcessor {
 
     }
 
+    private String extractCity(String input) {
+        input = input.toLowerCase();
+        if (input.contains("weather in")) {
+            int index = input.indexOf("weather in") + "weather in".length();
+            return input.substring(index).trim();
+        }
+        return "Delhi"; // fallback
+    }
 
     public void processCommand(String input){
         boolean found = false;
@@ -41,6 +49,12 @@ public class CommandProcessor {
             new SearchGoogle(input).execute();
             found = true;
         }
+        if (input.toLowerCase().startsWith("what's the weather in")) {
+            String city = input.toLowerCase().replace("what's the weather in", "").trim();
+            new GetWeather(city).execute();
+            found = true;
+        }
+
 
         for(String command : commands.keySet()){
             if(input.toLowerCase().contains(command)){
@@ -53,4 +67,5 @@ public class CommandProcessor {
             System.out.println("Sorry, I don't understand that yet.");
         }
     }
+
 }
