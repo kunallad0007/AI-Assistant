@@ -18,7 +18,7 @@ public class GetWeather {
 
     public void execute(){
 //        System.out.println(city);
-        String apiKey = "eee313006e118095a336d6394b39524b";
+        String apiKey = "[Your apiKey]";
         String urlString = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=metric";
 
         try {
